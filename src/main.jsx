@@ -7,7 +7,9 @@ import {
   RouterProvider,
 } from "react-router";
 import Root from './layouts/Root.jsx';
-import { useRouteError } from 'react-router';
+import Home from './components/Home/Home.jsx';
+import Login from './components/Login/Login.jsx';
+// import { useRouteError } from 'react-router';
 
 
 const router = createBrowserRouter([
@@ -15,7 +17,14 @@ const router = createBrowserRouter([
     path:'/',
     Component: Root,
     children:[
+       {index:true,
+        Component: Home
+      },
+      {
+        path: 'login',
+        Component:Login
 
+      }
     ]
   }
 ])
